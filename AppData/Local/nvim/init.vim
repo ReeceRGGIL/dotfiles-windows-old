@@ -9,13 +9,6 @@ scriptencoding utf-8            " Set current script encoding.
 
 " Plugins {{{
 
-" Auto-install vim-plug (for neovim).
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 " vim-plug plugins
 call plug#begin('~/.config/nvim/plugged')
 " Plugins
@@ -66,12 +59,6 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'editorconfig/editorconfig-vim'                                      " Set s                                                                              ettings based off editor config project file.
 " }}} Order Important Plugins
 call plug#end()
-
-" Auto-install missing plugins
-autocmd VimEnter *
-  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
-  \| endif
 
 " }}} Plugins
 
@@ -195,8 +182,8 @@ nnoremap <leader>tr :set invrelativenumber<CR>
 
 " Meta
 nnoremap <leader>mms :syntax sync fromstart<CR>
-nmap <leader>mme :e $VIMCONFIG/init.vim<CR>
-nmap <leader>mmr :so $VIMCONFIG/init.vim<CR>
+nmap <leader>mme :e ~/AppData/Local/nvim/init.vim<CR>
+nmap <leader>mmr :so ~/AppData/Local/nvim/init.vim<CR>
 
 " }}} Keybinds 
 
