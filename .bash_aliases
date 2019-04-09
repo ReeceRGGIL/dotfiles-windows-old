@@ -1,3 +1,5 @@
+# Run '\command' to run the command that it shadowed by an alias.
+
 # Single letter aliases.
 #alias a='TODO'
 alias b='cd ..'
@@ -7,19 +9,19 @@ alias c='clear'
 alias f='fg'
 #alias g='TODO'
 alias h='cd $HOME'
-#alias i='TODO'
+alias i='ipconfig getifaddr en0'
 alias j='jobs'
 #alias k='TODO'
 alias l='ls -CF'
-#alias m='man'
+alias m='man'
 #alias n='TODO'
 #alias o='TODO'
 alias p='ping -c 10'
 #alias q='TODO'
-#alias r='sudo !!'
-#alias s='sudo'
-#alias t='tmux'
-#alias u='sudo -i'
+alias r='sudo !!'
+alias s='sudo'
+alias t='tmux'
+alias u='sudo -i'
 alias v='vim'
 #alias w='TODO'
 alias x='exit'
@@ -31,9 +33,9 @@ alias cp='cp -i'	# Prompt for overwrite.
 alias mv='mv -i'	# Prompt for overwrite.
 alias rm='rm -I'	# Prompt for >3 or recursive deletion.
 alias ln='ln -i'	# Promt for overwrite.
-#alias chown='chown --preserve-root'
-#alias chmod='chmod --preserve-root'
-#alias chgrp='chgrp --preserve-root'
+alias chown='chown --preserve-root'
+alias chmod='chmod --preserve-root'
+alias chgrp='chgrp --preserve-root'
 
 # Error Tolerance.
 # alias cd..='cd ..'
